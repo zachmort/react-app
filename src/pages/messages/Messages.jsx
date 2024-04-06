@@ -1,10 +1,10 @@
 import React from 'react'
-import "./messages.scss"
+import "./Messages.scss"
 
-const messages = () => {
+const Messages = () => {
   return (
-    <div className='messages'>messages</div>
+    <div className='messages'>Messages</div>
   )
 }
 
-export default messages
+export default Messages
