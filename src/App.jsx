@@ -1,5 +1,5 @@
 import "./App.scss";
-import React from "react";
+import React, { Fragment } from "react";
 import Navbar from "./components/navbar/Navbar";
 import * as ReactDOM from "react-dom";
 import {
@@ -18,17 +18,86 @@ import {
 // import Message from "./pages/message/Message";
 // import MyGigs from "./pages/myGigs/MyGigs";
 
+const Layout = () => {
+    return (
+      <Fragment>
+        <Navbar/>
+        {/* <Footer/> */}
+        Hello world
+        </Fragment>
+      // <div>
+      //   Hello world   
+      // </div>
+    )
+  };
 
 
 function App() {
   // const Layout = () => {
     return (
-      <div><Navbar/></div>
-      // <div>
-      //   Hello world   
-      // </div>
+      <div className="App">
+      <Layout/>   
+      </div>
     )
   // };
+
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <Layout />,
+      children: [
+        {
+          path: "/",
+          element: <Home />,
+        },
+        {
+          path: "/gigs",
+          element: <Gigs />,
+        },
+        {
+          path: "/myGigs",
+          element: <MyGigs />,
+        },
+        {
+          path: "/orders",
+          element: <Orders />,
+        },
+        {
+          path: "/messages",
+          element: <Messages />,
+        },
+        {
+          path: "/message/:id",
+          element: <Message />,
+        },
+        {
+          path: "/add",
+          element: <Add />,
+        },
+        {
+          path: "/gig/:id",
+          element: <Gig />,
+        },
+      ],
+    },
+    {
+      path: "/register",
+      element: <Register />,
+    },
+    {
+      path: "/login",
+      element: <Login />,
+    },
+  ]);
+  
+    return <RouterProvider router={router} />;
+
 }
+
+
+
+// ReactDOM.createRoot(document.getElementById("home")).render(
+  // <RouterProvider router={router} />
+// );
 
 export default App
