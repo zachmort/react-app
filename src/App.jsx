@@ -1,6 +1,11 @@
 import "./App.scss";
 import React from "react";
-// import Navbar from "./components/navbar/Navbar";
+import Navbar from "./components/navbar/Navbar";
+import * as ReactDOM from "react-dom";
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
 // import Footer from "./components/footer/Footer";
 // import Home from "./pages/home/Home";
 // import Gigs from "./pages/gigs/Gigs";
@@ -18,9 +23,10 @@ import React from "react";
 function App() {
   // const Layout = () => {
     return (
-      <div>
-        hello World
-      </div>
+      <div><Navbar/></div>
+      // <div>
+      //   Hello world   
+      // </div>
     )
   // };
 }
