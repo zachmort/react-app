@@ -1,9 +1,9 @@
 import React from 'react'
 import "./Footer.scss"
 
-const footer = () => {
+const Footer = () => {
   return (
-    <div className='footer'>footer</div>
+    <div className='Footer'>footer</div>
   )
 }
 
